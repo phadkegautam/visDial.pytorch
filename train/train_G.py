@@ -30,7 +30,7 @@ from torch.autograd import Variable
 # from misc.netG import _netG
 # import datetime
 # from misc.utils import repackage_hidden_new
-
+print("This is Gautam's branch")
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--input_img_h5', default='../script/data/vdl_img_vgg.h5', help='path to dataset, now hdf5 file')
