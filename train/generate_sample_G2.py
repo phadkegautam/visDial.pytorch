@@ -61,7 +61,7 @@ parser.add_argument('--clip', type=float, default=5, help='gradient clipping')
 parser.add_argument('--margin', type=float, default=2, help='number of epochs to train for')
 parser.add_argument('--gumble_weight', type=int, default=0.1, help='folder to output images and model checkpoints')
 parser.add_argument('--log_interval', type=int, default=1, help='how many iterations show the log info')
-
+parser.add_argument('--path_to_home',type=str)
 opt = parser.parse_args()
 print(opt)
 
