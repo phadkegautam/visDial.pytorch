@@ -150,8 +150,9 @@ while(True):
     ques_hidden = repackage_hidden_new(ques_hidden, 1)
     hist_hidden = repackage_hidden_new(hist_hidden, his_input.size(1))
 
-    encoder_feat, ques_hidden = netE(ques_emb, his_emb, img_input, \
+    encoder_feat, ques_hidden, his_atten_weight = netE(ques_emb, his_emb, img_input, \
                                         ques_hidden, hist_hidden, ind)
+    print(his_atten_weight)
 
     _, ques_hidden = netG(encoder_feat.view(1,-1,opt.ninp), ques_hidden)
 
