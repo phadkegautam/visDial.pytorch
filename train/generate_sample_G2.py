@@ -22,17 +22,7 @@ import torchvision.transforms as transforms
 import torchvision.utils as vutils
 from torch.autograd import Variable
 
-from misc.utils import repackage_hidden, clip_gradient, adjust_learning_rate, \
-                    decode_txt, sample_batch_neg, l2_norm
-import misc.dataLoader as dl
-import misc.model as model
-from misc.encoder_QIH import _netE
-from misc.netG import _netG
-from misc.keras_image_loader import vgg_16
-from misc.old_vgg import old_vgg_16
-import datetime
-from misc.utils import repackage_hidden_new
-from misc.Data_history import get_history_data, generate_ans_from_idx
+
 
 parser = argparse.ArgumentParser()
 
@@ -74,6 +64,18 @@ parser.add_argument('--log_interval', type=int, default=1, help='how many iterat
 
 opt = parser.parse_args()
 print(opt)
+
+from misc.utils import repackage_hidden, clip_gradient, adjust_learning_rate, \
+                    decode_txt, sample_batch_neg, l2_norm
+import misc.dataLoader as dl
+import misc.model as model
+from misc.encoder_QIH import _netE
+from misc.netG import _netG
+from misc.keras_image_loader import vgg_16
+from misc.old_vgg import old_vgg_16
+import datetime
+from misc.utils import repackage_hidden_new
+from misc.Data_history import get_history_data, generate_ans_from_idx
 
 print("=> loading checkpoint '{}'".format(opt.model_path))
 checkpoint = torch.load(opt.model_path,map_location=torch.device('cpu'))
