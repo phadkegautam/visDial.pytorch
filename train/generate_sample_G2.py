@@ -79,7 +79,7 @@ from misc.utils import repackage_hidden_new
 from misc.Data_history import get_history_data, generate_ans_from_idx
 
 print("=> loading checkpoint '{}'".format(opt.model_path))
-checkpoint = torch.load(opt.model_path,map_location=torch.device('cpu'))
+checkpoint = torch.load(opt.model_path, map_location=torch.device('cpu'))
 model_path = opt.model_path
 opt.batchSize = 1
 
@@ -103,10 +103,11 @@ netW = model._netW(vocab_size, opt.ninp, opt.dropout)
 netG = _netG(opt.model, vocab_size, opt.ninp, opt.nhid, opt.nlayers, opt.dropout, opt.mos)
 critG = model.LMCriterion()
 sampler = model.gumbel_sampler()
-
+"""
 netW.load_state_dict(checkpoint['netW_g'])
 netE.load_state_dict(checkpoint['netE_g'])
 netG.load_state_dict(checkpoint['netG'])
+"""
 
 netE.eval()
 netW.eval()
