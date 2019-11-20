@@ -73,7 +73,7 @@ import misc.model as model
 from misc.encoder_QIH import _netE
 from misc.netG import _netG
 from misc.keras_image_loader import vgg_16
-from misc.old_vgg import old_vgg_16
+#from misc.old_vgg import old_vgg_16
 import datetime
 from misc.utils import repackage_hidden_new
 from misc.Data_history import get_history_data, generate_ans_from_idx

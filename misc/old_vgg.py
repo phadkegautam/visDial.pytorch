@@ -8,7 +8,7 @@ import pdb
 import random
 from misc.utils import repackage_hidden, clip_gradient, adjust_learning_rate, decode_txt
 
-file = '/home/gautam/visDial.pytorch/script/data/vdl_img_vgg_demo.h5'
+file = '/home/smit/PycharmProjects/visDial_CPU/visDial.pytorch/script/data/vdl_img_vgg_demo.h5'
 f = h5py.File(file)
 imgs = f['images_train']
 
