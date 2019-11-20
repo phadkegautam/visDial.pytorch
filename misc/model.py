@@ -26,7 +26,7 @@ class _netW(nn.Module):
             out = F.dropout(self.word_embed(input), self.d, training=self.training)
 
         return out
-
+    #
     def init_hidden(self, bsz):
         weight = next(self.parameters()).data
         if self.rnn_type == 'LSTM':
