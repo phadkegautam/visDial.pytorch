@@ -3,7 +3,7 @@ import argparse
 import os
 import random
 import sys
-sys.path.insert(1,'/home/smit/PycharmProjects/visDial_CPU/visDial.pytorch/')
+#sys.path.insert(1,'/home/smit/PycharmProjects/visDial_CPU/visDial.pytorch/')
 
 import pdb
 import time
