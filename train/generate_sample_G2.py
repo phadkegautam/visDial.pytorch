@@ -103,11 +103,11 @@ netW = model._netW(vocab_size, opt.ninp, opt.dropout)
 netG = _netG(opt.model, vocab_size, opt.ninp, opt.nhid, opt.nlayers, opt.dropout, opt.mos)
 critG = model.LMCriterion()
 sampler = model.gumbel_sampler()
-"""
-netW.load_state_dict(checkpoint['netW_g'])
-netE.load_state_dict(checkpoint['netE_g'])
+
+netW.load_state_dict(checkpoint['netW'])
+netE.load_state_dict(checkpoint['netE'])
 netG.load_state_dict(checkpoint['netG'])
-"""
+
 
 netE.eval()
 netW.eval()
