@@ -72,7 +72,7 @@ class _netE(nn.Module):
 
         encoder_feat = F.tanh(self.fc1(F.dropout(concat_feat, self.d, training=self.training)))
 
-        return encoder_feat, ques_hidden
+        return encoder_feat, ques_hidden, his_atten_weight
 
     def init_hidden(self, bsz):
         weight = next(self.parameters()).data

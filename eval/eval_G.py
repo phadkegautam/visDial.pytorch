@@ -191,9 +191,10 @@ def eval():
             ques_hidden = repackage_hidden_new(ques_hidden, batch_size)
             hist_hidden = repackage_hidden_new(hist_hidden, his_input.size(1))
 
-            encoder_feat, ques_hidden = netE(ques_emb, his_emb, img_input, \
+            encoder_feat, ques_hidden, his_atten_weight = netE(ques_emb, his_emb, img_input, \
                                                 ques_hidden, hist_hidden, rnd+1)
 
+            print (his_atten_weight)
             _, ques_hidden = netG(encoder_feat.view(1,-1,opt.ninp), ques_hidden)
 
             #ans_emb = ans_emb.view(ans_length, -1, 100, opt.nhid)
